@@ -1,0 +1,25 @@
+﻿<Window x:Class="DnD_SpellBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnD_SpellBook"
+        mc:Ignorable="d"
+        Title="Dnd Spellbook" Height="734" Width="1083">
+    <Grid Margin="0,0,0,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220*"/>
+            <ColumnDefinition Width="862*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="490"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ShowUserSpells" Content="Мои заклинания" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,10,0,0" Click="ShowUserSpells_Click"/>
+        <Button x:Name="ShowAllSpells" Content="Добавить существующее заклинание" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,80,0,0" Click="ShowAllSpells_Click"/>
+        <Button x:Name="AddSpell" Content="Создать новое заклинание" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,150,0,0" Click="AddSpell_Click"/>
+        <ScrollViewer Grid.ColumnSpan="2" Margin="220,0,0,-224">
+            <WrapPanel x:Name="SpellContainer" Height="297" Width="425"/>
+        </ScrollViewer>
+
+    </Grid>
+</Window>
