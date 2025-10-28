@@ -46,7 +46,7 @@ namespace DnD_SpellBook
 
         private void ShowUserSpells_Click(object sender, RoutedEventArgs e)
         {
-            DisplaySpells(spells.FindAll(s => s.IsUserSpell = true));
+            DisplaySpells(spells.FindAll(s => s.IsUserSpell == true));
         }
 
         private void ShowAllSpells_Click(object sender, RoutedEventArgs e)
@@ -63,7 +63,7 @@ namespace DnD_SpellBook
                 {
                     Name = addWindow.SpellName,
                     Description = addWindow.SpellDescription,
-                    IsUserSpell = true
+                    IsUserSpell = false
                 });
                 SaveSpells();
                 DisplaySpells(spells);
@@ -76,32 +76,14 @@ namespace DnD_SpellBook
 
             foreach (var spell in list)
             {
-                var border = new Border
+                var card = new SpellCardTemplate
                 {
-                    Background = spell.IsUserSpell ? Brushes.LightGoldenrodYellow : Brushes.LightGray,
-                    CornerRadius = new CornerRadius(8),
-                    BorderThickness = new Thickness(1),
-                    BorderBrush = Brushes.DarkGray,
-                    Padding = new Thickness(10),
-                    Margin = new Thickness(5)
+                    SpellName = spell.Name,
+                    SpellDescription = spell.Description,
+                    CardBackground = spell.IsUserSpell ? Brushes.LightGoldenrodYellow : Brushes.LightGray,
                 };
 
-                var stack = new StackPanel();
-                stack.Children.Add(new TextBlock
-                {
-                    Text = spell.Name,
-                    FontWeight = FontWeights.Bold,
-                    FontSize = 16,
-                    Margin = new Thickness(0, 0, 0, 5)
-                });
-                stack.Children.Add(new TextBlock
-                {
-                    Text = spell.Description,
-                    TextWrapping = TextWrapping.Wrap
-                });
-
-                border.Child = stack;
-                SpellContainer.Children.Add(border);
+                SpellContainer.Children.Add(card);
             }
         }
     }
