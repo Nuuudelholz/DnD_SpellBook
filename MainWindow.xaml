@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DnD_SpellBook"
         mc:Ignorable="d"
-        Title="Dnd Spellbook" Height="734" Width="1178">
+        Title="Dnd Spellbook" Height="734" Width="1203">
+    <Window.Background>
+        <SolidColorBrush Color="#FF1E2643"/>
+    </Window.Background>
 
     <Grid Margin="0,0,0,-6">
         <Grid.ColumnDefinitions>
@@ -15,11 +18,15 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="ShowUserSpells" Content="Мои заклинания" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,10,0,0" Click="ShowUserSpells_Click"/>
-        <Button x:Name="ShowAllSpells" Content="Добавить существующее заклинание" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,80,0,0" Click="ShowAllSpells_Click"/>
-        <Button x:Name="AddSpell" Content="Создать новое заклинание" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,150,0,0" Click="AddSpell_Click"/>
+        <Button x:Name="ShowUserSpells" Content="Мои заклинания" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,10,0,0" Click="ShowUserSpells_Click" Background="#FF374B5D" Foreground="White"/>
+        <Button x:Name="ShowAllSpells" Content="Добавить существующее заклинание" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,80,0,0" Click="ShowAllSpells_Click" Background="#FF374B5D" Foreground="White"/>
+        <Button x:Name="AddSpell" Content="Создать новое заклинание" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="50" Margin="0,150,0,0" Click="AddSpell_Click" Background="#FF374B5D" Foreground="White"/>
         <ScrollViewer Margin="10" Grid.Column="1">
-            <WrapPanel x:Name="SpellContainer" Width="840"/>
+            <WrapPanel x:Name="SpellContainer" Width="880">
+                <WrapPanel.Background>
+                    <SolidColorBrush Color="#FF1A1D3F"/>
+                </WrapPanel.Background>
+            </WrapPanel>
         </ScrollViewer>
 
     </Grid>

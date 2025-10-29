@@ -4,19 +4,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DnD_SpellBook"
-             mc:Ignorable="d" Width="210" Height="310">
-    <Grid Width="200" Height="300">
-        <Border x:Name="CardBorder" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10" Background="#FFA0A0A0">
-            <TextBox x:Name="SpellSchoolText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Школа:" VerticalAlignment="Top" Width="108" Background="{x:Null}" BorderBrush="{x:Null}" Height="20" Margin="81,65,0,0" IsReadOnly="True"/>
-        </Border>
-        <TextBox x:Name="SpellNameText" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Width="180" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" TextAlignment="Center" Height="50" IsReadOnly="True"/>
-        <TextBox x:Name="SpellLevelText" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Lvl:" VerticalAlignment="Top" Width="35" Background="{x:Null}" BorderBrush="{x:Null}" Height="20" IsReadOnly="True"/>
-        <TextBox x:Name="SpellTimeText" HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" Text="Вр. сотв.:" VerticalAlignment="Top" Width="113" Background="{x:Null}" BorderBrush="{x:Null}" Height="20" IsReadOnly="True"/>
-        <TextBox x:Name="SpellRangeText" HorizontalAlignment="Center" Margin="0,110,0,0" TextWrapping="Wrap" Text="Дистанция:" VerticalAlignment="Top" Width="180" Background="{x:Null}" BorderBrush="{x:Null}" Height="20" IsReadOnly="True"/>
-        <TextBox x:Name="SpellComponentText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Компоненты:" VerticalAlignment="Top" Width="180" Background="{x:Null}" BorderBrush="{x:Null}" Height="20" Margin="0,130,0,0" IsReadOnly="True"/>
-        <TextBox x:Name="SpellDurationText" HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" Text="Длительность:" VerticalAlignment="Top" Width="180" Background="{x:Null}" BorderBrush="{x:Null}" Height="20" IsReadOnly="True"/>
-        <TextBox x:Name="SpellClassText" HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="Классы:" VerticalAlignment="Top" Width="180" Background="{x:Null}" BorderBrush="{x:Null}" Height="20" IsReadOnly="True"/>
-        <TextBox x:Name="SpellDescriptionText" HorizontalAlignment="Left" Margin="58,175,0,0" TextWrapping="Wrap" Text="Описание:" VerticalAlignment="Top" Width="180" Background="{x:Null}" BorderBrush="{x:Null}" Height="20" IsReadOnly="True"/>
+             mc:Ignorable="d" Width="210" Height="310" Margin="5,40,5,0">
 
-    </Grid>
+    <Border x:Name="CardBorder" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10" Background="#FFA0A0A0" MouseEnter="CardBorder_MouseEnter" MouseLeave="CardBorder_MouseLeave">
+        <Grid Margin="9,9,9,9">
+            <TextBlock x:Name="SpellSchoolText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Школа:" VerticalAlignment="Top" Width="108" Height="20" Margin="95,50,0,0"/>
+            <TextBlock x:Name="SpellNameText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Width="180" FontWeight="Bold" TextAlignment="Center" Height="50"/>
+            <TextBlock x:Name="SpellLevelText" HorizontalAlignment="Left" Margin="0,50,0,0" TextWrapping="Wrap" Text="Lvl:" VerticalAlignment="Top" Width="35" Height="20"/>
+            <TextBlock x:Name="SpellTimeText" HorizontalAlignment="Left" Margin="-1,75,0,0" TextWrapping="Wrap" Text="Вр. сотв.:" VerticalAlignment="Top" Width="113" Height="20"/>
+            <TextBlock x:Name="SpellRangeText" HorizontalAlignment="Left" Margin="-1,95,0,0" TextWrapping="Wrap" Text="Дистанция:" VerticalAlignment="Top" Width="180" Height="20"/>
+            <TextBlock x:Name="SpellComponentText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Компоненты:" VerticalAlignment="Top" Width="180" Height="20" Margin="-1,115,0,0"/>
+            <TextBlock x:Name="SpellDurationText" HorizontalAlignment="Left" Margin="-1,0,0,0" TextWrapping="Wrap" Text="Длительность:" VerticalAlignment="Center" Width="180" Height="20"/>
+            <TextBlock x:Name="SpellClassText" HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="Классы:" VerticalAlignment="Top" Width="180" FontStyle="Italic"/>
+            <TextBlock x:Name="SpellDescriptionText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Описание:" VerticalAlignment="Top" Width="190" Height="115" TextAlignment="Center" Margin="0,155,0,0"/>
+
+            <CheckBox x:Name="UserSpellCheckBox" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-1,2,0,0" Checked="UserSpellCheckBox_Checked" Unchecked="UserSpellCheckBox_Unchecked" Width="17"/>
+        </Grid>
+    </Border>
 </UserControl>

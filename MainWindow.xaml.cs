@@ -76,13 +76,14 @@ namespace DnD_SpellBook
 
             foreach (var spell in list)
             {
-                var card = new SpellCardTemplate
+                var card = new SpellCardTemplate(spell)
                 {
                     SpellName = spell.Name,
                     SpellDescription = spell.Description,
-                    CardBackground = spell.IsUserSpell ? Brushes.LightGoldenrodYellow : Brushes.LightGray,
+                    CardBackground = spell.IsUserSpell ? Brushes.MediumAquamarine: Brushes.LightGray,
                 };
 
+                card.SpellChanged += s => SaveSpells();
                 SpellContainer.Children.Add(card);
             }
         }
