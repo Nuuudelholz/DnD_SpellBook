@@ -20,6 +20,13 @@ namespace DnD_SpellBook
     public partial class AddSpellWindow : Window
     {
         public string SpellName { get; private set; }
+        public string SpellLevel { get; private set; }
+        public string SpellSchool { get; private set; }
+        public string SpellCastTime { get; private set; }
+        public string SpellRange { get; private set; }
+        public string SpellComponents { get; private set; }
+        public string SpellDuration { get; private set; }
+        public string SpellClasses { get; private set; }
         public string SpellDescription { get; private set; }
 
         public AddSpellWindow()
@@ -30,6 +37,13 @@ namespace DnD_SpellBook
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SpellName = NameBox.Text;
+            SpellLevel = LevelBox.Text;
+            SpellSchool = SchoolBox.Text;
+            SpellCastTime = CastTimeBox.Text;
+            SpellRange = RangeBox.Text;
+            //SpellComponents
+            SpellDuration = DurationBox.Text;
+            //SpellClasses
             SpellDescription = DescriptionBox.Text;
 
             if (string.IsNullOrWhiteSpace(SpellName))

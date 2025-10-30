@@ -62,8 +62,14 @@ namespace DnD_SpellBook
                 spells.Add(new SpellData
                 {
                     Name = addWindow.SpellName,
+                    Level = addWindow.SpellLevel,
+                    School = addWindow.SpellSchool,
+                    Range = addWindow.SpellRange,
+                    Duration = addWindow.SpellDuration,
+                    CastTime = addWindow.SpellCastTime,
                     Description = addWindow.SpellDescription,
-                    IsUserSpell = false
+                    IsUserSpell = false,
+                    IsAddedByUser = false
                 });
                 SaveSpells();
                 DisplaySpells(spells);
@@ -78,9 +84,7 @@ namespace DnD_SpellBook
             {
                 var card = new SpellCardTemplate(spell)
                 {
-                    SpellName = spell.Name,
-                    SpellDescription = spell.Description,
-                    CardBackground = spell.IsUserSpell ? Brushes.MediumAquamarine: Brushes.LightGray,
+                    //CardBackground = spell.IsUserSpell ? Brushes.MediumAquamarine: Brushes.LightGray,
                 };
 
                 card.SpellChanged += s => SaveSpells();

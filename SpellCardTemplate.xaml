@@ -8,15 +8,15 @@
 
     <Border x:Name="CardBorder" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10" Background="#FFA0A0A0" MouseEnter="CardBorder_MouseEnter" MouseLeave="CardBorder_MouseLeave">
         <Grid Margin="9,9,9,9">
-            <TextBlock x:Name="SpellSchoolText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Школа:" VerticalAlignment="Top" Width="108" Height="20" Margin="95,50,0,0"/>
-            <TextBlock x:Name="SpellNameText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Width="180" FontWeight="Bold" TextAlignment="Center" Height="50"/>
-            <TextBlock x:Name="SpellLevelText" HorizontalAlignment="Left" Margin="0,50,0,0" TextWrapping="Wrap" Text="Lvl:" VerticalAlignment="Top" Width="35" Height="20"/>
-            <TextBlock x:Name="SpellTimeText" HorizontalAlignment="Left" Margin="-1,75,0,0" TextWrapping="Wrap" Text="Вр. сотв.:" VerticalAlignment="Top" Width="113" Height="20"/>
-            <TextBlock x:Name="SpellRangeText" HorizontalAlignment="Left" Margin="-1,95,0,0" TextWrapping="Wrap" Text="Дистанция:" VerticalAlignment="Top" Width="180" Height="20"/>
-            <TextBlock x:Name="SpellComponentText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Компоненты:" VerticalAlignment="Top" Width="180" Height="20" Margin="-1,115,0,0"/>
-            <TextBlock x:Name="SpellDurationText" HorizontalAlignment="Left" Margin="-1,0,0,0" TextWrapping="Wrap" Text="Длительность:" VerticalAlignment="Center" Width="180" Height="20"/>
-            <TextBlock x:Name="SpellClassText" HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="Классы:" VerticalAlignment="Top" Width="180" FontStyle="Italic"/>
-            <TextBlock x:Name="SpellDescriptionText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Описание:" VerticalAlignment="Top" Width="190" Height="115" TextAlignment="Center" Margin="0,155,0,0"/>
+            <TextBlock x:Name="SpellNameText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="180" FontWeight="Bold" TextAlignment="Center" Height="50"/>
+            <TextBlock x:Name="SpellSchoolText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding School, StringFormat='Школа: {0}'}" VerticalAlignment="Top" Width="90" Height="20" Margin="95,50,0,0"/>
+            <TextBlock x:Name="SpellLevelText" HorizontalAlignment="Left" Margin="0,50,0,0" TextWrapping="Wrap" Text="{Binding Level, StringFormat='Уровень: {0}'}" VerticalAlignment="Top" Width="95" Height="20"/>
+            <TextBlock x:Name="SpellTimeText" HorizontalAlignment="Center" Margin="0,75,0,0" TextWrapping="Wrap" Text="{Binding CastTime, StringFormat='Вр. сотв.: {0}'}" VerticalAlignment="Top" Width="190" Height="20"/>
+            <TextBlock x:Name="SpellRangeText" HorizontalAlignment="Center" Margin="0,95,0,0" TextWrapping="Wrap" Text="{Binding Range, StringFormat='Дистанция: {0}'}" VerticalAlignment="Top" Width="190" Height="20"/>
+            <TextBlock x:Name="SpellComponentText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Components, StringFormat='Компоненты: {0}'}" VerticalAlignment="Top" Width="191" Height="20" Margin="0,115,0,0"/>
+            <TextBlock x:Name="SpellDurationText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Duration, StringFormat='Длительность: {0}'}" VerticalAlignment="Center" Width="191" Height="20"/>
+            <TextBlock x:Name="SpellClassText" HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="{Binding Classes, StringFormat='Классы: {0}'}" VerticalAlignment="Top" Width="180" FontStyle="Italic"/>
+            <TextBlock x:Name="SpellDescriptionText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Description, StringFormat='Описание:&#x0a;{0}'}" VerticalAlignment="Top" Width="190" Height="115" TextAlignment="Center" Margin="0,155,0,0"/>
 
             <CheckBox x:Name="UserSpellCheckBox" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-1,2,0,0" Checked="UserSpellCheckBox_Checked" Unchecked="UserSpellCheckBox_Unchecked" Width="17"/>
         </Grid>

@@ -34,25 +34,11 @@ namespace DnD_SpellBook
             CardBorder.RenderTransformOrigin = new Point(0.5, 0.5);
         }
 
-        public string SpellName
-        {
-            get => SpellNameText.Text;
-            set => SpellNameText.Text = value;
-        }
-
-        public string SpellDescription
-        {
-            get => SpellDescriptionText.Text;
-            set => SpellDescriptionText.Text = value;
-        }
-
         public Brush CardBackground
         {
             get => CardBorder.Background;
             set => CardBorder.Background = value;
         }
-
-        private Popup hoverPopup;
 
         private void CardBorder_MouseEnter(object sender, MouseEventArgs e)
         {
