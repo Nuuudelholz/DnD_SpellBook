@@ -67,6 +67,8 @@ namespace DnD_SpellBook
                     Range = addWindow.SpellRange,
                     Duration = addWindow.SpellDuration,
                     CastTime = addWindow.SpellCastTime,
+                    Classes = addWindow.SpellClasses,
+                    Components = addWindow.SpellComponents,
                     Description = addWindow.SpellDescription,
                     IsUserSpell = false,
                     IsAddedByUser = false

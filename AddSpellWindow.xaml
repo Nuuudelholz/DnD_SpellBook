@@ -1,6 +1,10 @@
-﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="DnD_SpellBook.AddSpellWindow" WindowStartupLocation="CenterOwner" Width="500" Title="Добавить заклинание" Height="410">
-    <Grid>
-        <Grid.ColumnDefinitions>
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+ x:Class="DnD_SpellBook.AddSpellWindow" WindowStartupLocation="CenterOwner" Width="500" Title="Добавить заклинание" Height="410"
+>
+    <Grid
+>
+        <Grid.ColumnDefinitions
+>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -56,20 +60,20 @@
             <ComboBoxItem Content="Минуты"/>
             <ComboBoxItem Content="Часы"/>
         </ComboBox>
-        <xctk:CheckComboBox Grid.Row="3" Margin="65,28,65,10">
-            <ComboBoxItem Content="В"/>
-            <ComboBoxItem Content="С"/>
-            <ComboBoxItem Content="М"/>
+        <xctk:CheckComboBox x:Name="ComponentBox" Grid.Row="3" Margin="65,28,65,10">
+            <sys:String>Вербальный</sys:String>
+            <sys:String>Соматический</sys:String>
+            <sys:String>Материальный</sys:String>
         </xctk:CheckComboBox>
-        <xctk:CheckComboBox Grid.Row="6" Margin="65,22,65,10">
-            <ComboBoxItem Content="Бард"/>
-            <ComboBoxItem Content="Волшебник"/>
-            <ComboBoxItem Content="Друид"/>
-            <ComboBoxItem Content="Жрец"/>
-            <ComboBoxItem Content="Кодун"/>
-            <ComboBoxItem Content="Паладин"/>
-            <ComboBoxItem Content="Следопыт"/>
-            <ComboBoxItem Content="Чародей"/>
+        <xctk:CheckComboBox x:Name="ClassesBox" Grid.Row="6" Margin="65,22,65,10">
+            <sys:String>Бард</sys:String>
+            <sys:String>Волшебник</sys:String>
+            <sys:String>Друид</sys:String>
+            <sys:String>Жрец</sys:String>
+            <sys:String>Колдун</sys:String>
+            <sys:String>Паладин</sys:String>
+            <sys:String>Следопыт</sys:String>
+            <sys:String>Чародей</sys:String>
         </xctk:CheckComboBox>
     </Grid>
 </Window>

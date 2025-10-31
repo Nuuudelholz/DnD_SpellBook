@@ -36,14 +36,17 @@ namespace DnD_SpellBook
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+            var selectedComponents = ComponentBox.SelectedItems.Cast<string>();
+            var selectedClasses = ClassesBox.SelectedItems.Cast<string>();
+
             SpellName = NameBox.Text;
             SpellLevel = LevelBox.Text;
             SpellSchool = SchoolBox.Text;
             SpellCastTime = CastTimeBox.Text;
             SpellRange = RangeBox.Text;
-            //SpellComponents
+            SpellComponents = string.Join(", ", selectedComponents);
             SpellDuration = DurationBox.Text;
-            //SpellClasses
+            SpellClasses = string.Join(", ", selectedClasses);
             SpellDescription = DescriptionBox.Text;
 
             if (string.IsNullOrWhiteSpace(SpellName))
