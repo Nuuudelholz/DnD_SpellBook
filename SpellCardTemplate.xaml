@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DnD_SpellBook"
-             mc:Ignorable="d" Width="210" Height="310" Margin="5,40,5,0">
+             mc:Ignorable="d" Width="210" Height="310" Margin="5,20,5,0">
 
-    <Border x:Name="CardBorder" BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10" MouseEnter="CardBorder_MouseEnter" MouseLeave="CardBorder_MouseLeave">
+    <Border x:Name="CardBorder" BorderBrush="Black" BorderThickness="1" CornerRadius="10" MouseEnter="CardBorder_MouseEnter" MouseLeave="CardBorder_MouseLeave" MouseLeftButtonUp="CardBorder_MouseLeftButtonUp" Cursor="Hand">
         <Border.Background>
             <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ScrollBarColorKey}}"/>
         </Border.Background>
@@ -26,13 +26,13 @@
                 <ColumnDefinition Width="119*"/>
             </Grid.ColumnDefinitions>
             <TextBlock x:Name="SpellNameText" TextWrapping="Wrap" Text="{Binding Name}" FontWeight="Bold" TextAlignment="Center" Grid.ColumnSpan="2" Margin="17,0,17,5"/>
-            <TextBlock x:Name="SpellSchoolText" TextWrapping="Wrap" Text="{Binding School, StringFormat='Шк.: {0}'}" Grid.Column="1" Margin="0,48,0,1" Grid.RowSpan="2" TextAlignment="Right"/>
+            <TextBlock x:Name="SpellSchoolText" TextWrapping="Wrap" Text="{Binding School, StringFormat='Шк.: {0}'}" Grid.Column="1" Margin="0,48,0,1" Grid.RowSpan="2" TextAlignment="Right" TextTrimming="CharacterEllipsis" ToolTip="{Binding School}" Cursor="Help"/>
             <TextBlock x:Name="SpellLevelText" TextWrapping="Wrap" Text="{Binding Level, StringFormat='Ур.: {0}'}" Margin="0,48,0,1" Grid.RowSpan="2"/>
-            <TextBlock x:Name="SpellTimeText" TextWrapping="Wrap" Text="{Binding CastTime, StringFormat='Вр. сотв.: {0}'}" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,24,0,24" Grid.RowSpan="3"/>
-            <TextBlock x:Name="SpellRangeText" TextWrapping="Wrap" Text="{Binding Range, StringFormat='Дист.: {0}'}" Grid.ColumnSpan="2" Grid.Row="3" Margin="0,0,0,24" Grid.RowSpan="2"/>
-            <TextBlock x:Name="SpellComponentText" TextWrapping="Wrap" Text="{Binding Components, StringFormat='Комп.: {0}'}" Grid.ColumnSpan="2" Grid.Row="4"/>
-            <TextBlock x:Name="SpellDurationText" TextWrapping="Wrap" Text="{Binding Duration, StringFormat='Длит.: {0}'}" Grid.ColumnSpan="2" Grid.Row="5"/>
-            <TextBlock x:Name="SpellClassText" TextWrapping="Wrap" Text="{Binding Classes, StringFormat='Классы: {0}'}" FontStyle="Italic" Grid.ColumnSpan="2" Grid.Row="7"/>
+            <TextBlock x:Name="SpellTimeText" TextWrapping="Wrap" Text="{Binding CastTime, StringFormat='Вр. сотв.: {0}'}" Grid.ColumnSpan="2" Grid.Row="1" Margin="0,24,0,24" Grid.RowSpan="3" TextTrimming="CharacterEllipsis" ToolTip="{Binding CastTime}" Cursor="Help"/>
+            <TextBlock x:Name="SpellRangeText" TextWrapping="Wrap" Text="{Binding Range, StringFormat='Дист.: {0}'}" Grid.ColumnSpan="2" Grid.Row="3" Margin="0,0,0,24" Grid.RowSpan="2" TextTrimming="CharacterEllipsis" ToolTip="{Binding Range}" Cursor="Help"/>
+            <TextBlock x:Name="SpellComponentText" TextWrapping="Wrap" Text="{Binding Components, StringFormat='Комп.: {0}'}" Grid.ColumnSpan="2" Grid.Row="4" TextTrimming="CharacterEllipsis" ToolTip="{Binding Components}" Cursor="Help"/>
+            <TextBlock x:Name="SpellDurationText" TextWrapping="Wrap" Text="{Binding Duration, StringFormat='Длит.: {0}'}" Grid.ColumnSpan="2" Grid.Row="5" TextTrimming="CharacterEllipsis" ToolTip="{Binding Duration}" Cursor="Help"/>
+            <TextBlock x:Name="SpellClassText" TextWrapping="Wrap" Text="{Binding Classes, StringFormat='Классы: {0}'}" FontStyle="Italic" Grid.ColumnSpan="2" Grid.Row="7" TextTrimming="CharacterEllipsis" ToolTip="{Binding Classes}" Cursor="Help"/>
 
             <CheckBox x:Name="UserSpellCheckBox" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Checked="UserSpellCheckBox_Checked" Unchecked="UserSpellCheckBox_Unchecked" Width="17" Height="15"/>
             <ScrollViewer Grid.Row="5" Grid.ColumnSpan="2" Margin="0,24,0,24" Grid.RowSpan="3" VerticalScrollBarVisibility="Hidden">

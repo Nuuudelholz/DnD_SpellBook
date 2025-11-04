@@ -1,7 +1,7 @@
 ﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:sys="clr-namespace:System;assembly=mscorlib"
- x:Class="DnD_SpellBook.AddSpellWindow" WindowStartupLocation="CenterOwner" Width="500" Title="Добавить заклинание" Height="410"
+ x:Class="DnD_SpellBook.AddSpellWindow" WindowStartupLocation="CenterScreen" Width="500" Title="Добавить заклинание" Height="410" ResizeMode="NoResize"
 >
-    <Grid
+    <Grid Background="#FF16213C"
 >
         <Grid.ColumnDefinitions
 >
@@ -18,19 +18,19 @@
             <RowDefinition Height="45*"/>
         </Grid.RowDefinitions>
         <Button Grid.Row="6" Margin="125,10,10,8" Content="Добавить" Grid.Column="1" Click="Add_Click"/>
-        <TextBlock VerticalAlignment="Top" Text="Название" TextWrapping="Wrap" Margin="224,10,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <TextBox Width="120" VerticalAlignment="Top" Text="TextBox" TextWrapping="Wrap" TextAlignment="Center" x:Name="NameBox" Margin="190,31,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <TextBlock VerticalAlignment="Top" Text="Школа" TextWrapping="Wrap" Grid.Row="1" Margin="0,6,0,0" HorizontalAlignment="Center" Grid.Column="1"/>
-        <TextBlock VerticalAlignment="Top" Text="Уровень" TextWrapping="Wrap" Grid.Row="1" Margin="0,6,0,0" HorizontalAlignment="Center"/>
-        <TextBlock VerticalAlignment="Top" Text="Время сотворения" TextWrapping="Wrap" Grid.Row="2" Margin="0,7,0,0" HorizontalAlignment="Center"/>
-        <TextBlock VerticalAlignment="Top" Text="Дистанция" TextWrapping="Wrap" Grid.Row="2" Margin="0,7,0,0" HorizontalAlignment="Center" Grid.Column="1"/>
-        <TextBox Width="120" VerticalAlignment="Top" Text="TextBox" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="2" x:Name="RangeBox" Margin="0,28,0,0" HorizontalAlignment="Center" Grid.Column="1"/>
-        <TextBlock VerticalAlignment="Top" Text="Компоненты" TextWrapping="Wrap" Grid.Row="3" Margin="0,7,0,0" HorizontalAlignment="Center"/>
-        <TextBlock VerticalAlignment="Top" Text="Длительность" TextWrapping="Wrap" Grid.Row="3" Margin="0,7,0,0" HorizontalAlignment="Center" Grid.Column="1"/>
-        <TextBox Width="120" VerticalAlignment="Top" Text="TextBox" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="3" x:Name="DurationBox" Margin="0,28,0,0" HorizontalAlignment="Center" Grid.Column="1"/>
-        <TextBlock VerticalAlignment="Top" Text="Описание" TextWrapping="Wrap" Grid.Row="4" Margin="223,6,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <TextBox Width="370" VerticalAlignment="Center" Text="TextBox" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="4" Grid.RowSpan="2" x:Name="DescriptionBox" Margin="65,0,0,0" Height="56" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <TextBlock VerticalAlignment="Top" Text="Класс" TextWrapping="Wrap" Grid.Row="5" Grid.RowSpan="2" Margin="0,55,0,0" HorizontalAlignment="Center"/>
+        <TextBlock VerticalAlignment="Top" Text="Название" TextWrapping="Wrap" Margin="224,10,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2" Foreground="White" FontSize="14"/>
+        <TextBox Width="120" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" x:Name="NameBox" Margin="190,31,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <TextBlock VerticalAlignment="Top" Text="Школа" TextWrapping="Wrap" Grid.Row="1" Margin="0,6,0,0" HorizontalAlignment="Center" Grid.Column="1" Foreground="White" FontSize="14"/>
+        <TextBlock VerticalAlignment="Top" Text="Уровень" TextWrapping="Wrap" Grid.Row="1" Margin="0,6,0,0" HorizontalAlignment="Center" Foreground="White" FontSize="14"/>
+        <TextBlock VerticalAlignment="Top" Text="Время сотворения" TextWrapping="Wrap" Grid.Row="2" Margin="0,7,0,0" HorizontalAlignment="Center" Foreground="White" FontSize="14"/>
+        <TextBlock VerticalAlignment="Top" Text="Дистанция" TextWrapping="Wrap" Grid.Row="2" Margin="0,7,0,0" HorizontalAlignment="Center" Grid.Column="1" Foreground="White" FontSize="14"/>
+        <TextBox Width="120" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="2" x:Name="RangeBox" Margin="0,28,0,0" HorizontalAlignment="Center" Grid.Column="1"/>
+        <TextBlock VerticalAlignment="Top" Text="Компоненты" TextWrapping="Wrap" Grid.Row="3" Margin="0,7,0,0" HorizontalAlignment="Center" Foreground="White" FontSize="14"/>
+        <TextBlock VerticalAlignment="Top" Text="Длительность" TextWrapping="Wrap" Grid.Row="3" Margin="0,7,0,0" HorizontalAlignment="Center" Grid.Column="1" Foreground="White" FontSize="14"/>
+        <TextBox Width="120" VerticalAlignment="Top" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="3" x:Name="DurationBox" Margin="0,28,0,0" HorizontalAlignment="Center" Grid.Column="1"/>
+        <TextBlock VerticalAlignment="Top" Text="Описание" TextWrapping="Wrap" Grid.Row="4" Margin="218,6,0,0" HorizontalAlignment="Left" Grid.ColumnSpan="2" Foreground="White" FontSize="14"/>
+        <TextBox Width="370" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" Grid.Row="4" Grid.RowSpan="2" x:Name="DescriptionBox" Margin="65,0,0,0" Height="56" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <TextBlock VerticalAlignment="Top" Text="Класс" TextWrapping="Wrap" Grid.Row="5" Grid.RowSpan="2" Margin="0,55,0,0" HorizontalAlignment="Center" Foreground="White" FontSize="14"/>
         <ComboBox Width="120" VerticalAlignment="Top" Grid.Row="1" x:Name="LevelBox" Margin="0,27,0,0" HorizontalAlignment="Center">
             <ComboBoxItem Content="Заговор"/>
             <ComboBoxItem Content="1"/>

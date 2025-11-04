@@ -108,6 +108,9 @@
       <DependentUpon>SpellCardTemplate.xaml</DependentUpon>
     </Compile>
     <Compile Include="SpellData.cs" />
+    <Compile Include="SpellDetailsWindow.xaml.cs">
+      <DependentUpon>SpellDetailsWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddSpellWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -125,6 +128,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="SpellCardTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SpellDetailsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

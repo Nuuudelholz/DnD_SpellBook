@@ -86,5 +86,12 @@ namespace DnD_SpellBook
         {
             CardBackground = Spell.IsUserSpell ? Brushes.MediumAquamarine : Brushes.LightGray;
         }
+
+        private void CardBorder_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            var detailWindow = new SpellDetailsWindow(Spell);
+            detailWindow.Owner = Application.Current.MainWindow;
+            detailWindow.ShowDialog();
+        }
     }
 }
